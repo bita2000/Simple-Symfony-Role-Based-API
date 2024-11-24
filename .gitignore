@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+/.env
+/.env.local
+/var/cache/*
+/var/log/*
+/var/sessions/*
+/.idea/
+/vendor/
+/node_modules/
+/composer.lock

@@ -1,0 +1,14 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+login:
+    path: /login
+    methods: POST
+
+impersonate_user:
+    path: /api/impersonate
+    controller: App\Controller\ImpersonationController::impersonateUser
+    methods: [ POST ]

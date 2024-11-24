@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.4/phpunit.xsd"
+        bootstrap="vendor/autoload.php"
+        colors="true"
+        verbose="true"
+        stopOnFailure="false"
+>
+    <php>
+        <!-- Set the Kernel class for Symfony -->
+        <env name="KERNEL_CLASS" value="App\Kernel" />
+        <env name="APP_ENV" value="test" />
+<!--        <env name="DATABASE_URL" value="sqlite:///:memory:" />-->
+<!--        <env name="JWT_SECRET_KEY" value="%kernel.project_dir%/config/jwt/private.pem" />-->
+<!--        <env name="JWT_PUBLIC_KEY" value="%kernel.project_dir%/config/jwt/public.pem" />-->
+<!--        <env name="JWT_PASSPHRASE" value="test_project" />-->
+        <env name="CORS_ALLOW_ORIGIN" value="*" />
+    </php>
+
+    <testsuites>
+        <testsuite name="Project Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage>
+        <include>
+            <directory>src</directory>
+        </include>
+    </coverage>
+
+    <extensions>
+        <extension class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
+    </extensions>
+</phpunit>
